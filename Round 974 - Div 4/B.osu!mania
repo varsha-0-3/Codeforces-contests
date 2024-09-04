@@ -1,0 +1,27 @@
+// https://codeforces.com/contest/2009/problem/B
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int t, n;
+    char beat;
+    vector<int> vec;
+    cin >> t;
+    while(t--){
+        cin >> n;
+        for(int i = 0; i < n; i++){
+            for(int j = 1; j <= 4; j++){
+                cin >> beat;
+                if(beat == '#'){
+                    vec.push_back(j);
+                }
+            }
+        }
+        for(int i = vec.size()-1; i >= 0; i--){
+            cout << vec[i] << " ";
+        }
+        vec.clear();
+    }
+    return 0;
+}
